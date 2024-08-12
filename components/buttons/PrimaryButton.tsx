@@ -2,18 +2,19 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { Platform, Pressable, StyleSheet, Text } from 'react-native';
 
 interface IProps{
-  count: number;
-  setCount : Dispatch<SetStateAction<number>>
+  label: string;
+  onPress?: () => void;
+  onLongPress?: () => void
 }
-export const PrimaryButton = ({count, setCount}: IProps) => {
+export const PrimaryButton = ({label, onPress, onLongPress}: IProps) => {
   return (
     <Pressable
-      onPress={() => setCount(count + 1)}
-      onLongPress={() => setCount(0)}
+      onPress={() => onPress && onPress()}
+      onLongPress={() => onLongPress && onLongPress()}
       style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}
     >
       <Text style={{ color: Platform.OS === 'android' ? 'white' : '#4746AB' }}>
-        Incrementar
+        {label}
       </Text>
     </Pressable>
   );
