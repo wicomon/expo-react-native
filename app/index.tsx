@@ -5,8 +5,9 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
-      <Link style={styles.list} href={'/counter'}>View counter</Link>
-      <Link style={styles.list} href={'/counter2'}>View counter 3</Link>
+      <Link style={styles.list} href={'/counter'}>counter</Link>
+      <Link style={styles.list} href={'/counter2'}>counter FAB</Link>
+      <Link style={styles.list} href={'/boxObjectModel'}>Box object model</Link>
     </View>
   );
 }

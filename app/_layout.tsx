@@ -9,10 +9,21 @@ export default function RootLayout() {
         icon: (props) => <IonIcon {...props}/>
       }} 
     >
-      <Stack>
+      <Stack
+        // screenOptions={{
+        //   headerStyle: {
+        //     backgroundColor: '#9d9d9d',
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
+        //   },
+        // }}
+      >
         <Stack.Screen name='index' />
         <Stack.Screen name='counter' />
-        <Stack.Screen name='counter3' />
+        <Stack.Screen name='counter2' />
+        <Stack.Screen name='boxObjectModel' />
       </Stack>
     </PaperProvider>
   );
